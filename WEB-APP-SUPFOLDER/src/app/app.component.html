@@ -1,0 +1,91 @@
+<br>
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+<mat-progress-bar mode="indeterminate" [color]="'warn'"></mat-progress-bar>
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+<mat-progress-bar mode="query" [color]="'accent'"></mat-progress-bar>
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+<mat-progress-bar mode="indeterminate" [color]="'primary'"></mat-progress-bar>
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+
+
+
+<hr>
+<br>
+
+
+
+<h2 [id]="'app-component-h2'">
+  🌌Faviconer•🇵🇽🔳🟥🟩🟦
+</h2>
+<br>
+
+
+
+<mat-form-field [id]="'app-component-mat-form-field'">
+  <mat-label>Panel color</mat-label>
+  <mat-select [formControl]="panelColor" panelClass="c-{{panelColor.value}}">
+    <mat-option value="black">
+      Black
+    </mat-option>
+    <mat-option value="grey">
+      Grey
+    </mat-option>
+    <mat-option value="red">
+      Red
+    </mat-option>
+    <mat-option value="green">
+      Green
+    </mat-option>
+    <mat-option value="blue">
+      Blue
+    </mat-option>
+    <mat-option value="lightblue">
+      Lightblue
+    </mat-option>
+    <mat-option value="white">
+      White
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+<div [id]="'app-component-div'">
+  <mat-grid-list cols="16" rowHeight="1:1">
+    @for (tile of tiles; track tile)
+    {
+    <mat-grid-tile class="MatGridTile" onclick="javascript:
+    this.style.backgroundColor = String(
+      document.querySelector(
+        'span.mat-mdc-select-min-line.ng-tns-c2400438669-1.ng-star-inserted'
+        ).innerText
+      ).toLocaleLowerCase()
+    "></mat-grid-tile>
+    }
+  </mat-grid-list>
+</div>
+
+
+
+<button mat-raised-button color="primary" [id]="'annul-coloring-bttn'" (click)="annul_coloring_func()">
+  Annul Coloring
+</button>
+<button mat-raised-button color="accent" [id]="'reload-webie-bttn'" (click)="reload_webie_func()">
+  Reload Webie
+</button>
+<br>
+
+
+
+<button mat-raised-button color="warn" [id]="'download-bttn'" (click)="download_favico_func()">
+  Download: favicon.ico
+</button>
+
+
+
+<address id="app-component-address-author-info">
+  <p>github.com/jozef-javorsky-dodo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jozef.javorsky.dodo&#64;gmail.com</p>
+</address>

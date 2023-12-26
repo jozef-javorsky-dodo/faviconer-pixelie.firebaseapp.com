@@ -1,0 +1,17 @@
+* {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+
+html {
+  height: 100%;
+}
+
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgb(122, 122, 122) !important;
+}
